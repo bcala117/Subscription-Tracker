@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JDr-gy-thB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xVg-JD-Va8">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -204,10 +204,66 @@
             </objects>
             <point key="canvasLocation" x="1077" y="-218"/>
         </scene>
-        <!--Stream View Controller-->
+        <!--Popular Apps-->
+        <scene sceneID="Ohi-pm-uV4">
+            <objects>
+                <tableViewController id="DPi-4r-pOM" customClass="HomeTableViewController" customModule="Subscription_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s0z-Fr-gzK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="appTableCell" rowHeight="121" id="VUt-eN-rqh" customClass="AppTableViewCell" customModule="Subscription_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="390" height="121"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VUt-eN-rqh" id="Ww6-YY-iaQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="121"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-bt-ofT">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="Igj-Ob-Rur"/>
+                                                <constraint firstAttribute="height" constant="100" id="enh-JZ-p4g"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kv-wf-cfE">
+                                            <rect key="frame" x="108" y="11" width="118.33333333333331" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Kv-wf-cfE" secondAttribute="trailing" constant="20" symbolic="YES" id="B8b-eV-0m5"/>
+                                        <constraint firstItem="q8f-bt-ofT" firstAttribute="leading" secondItem="Ww6-YY-iaQ" secondAttribute="leading" id="RlQ-6z-QMh"/>
+                                        <constraint firstItem="8Kv-wf-cfE" firstAttribute="top" secondItem="Ww6-YY-iaQ" secondAttribute="topMargin" id="dbw-Br-PQY"/>
+                                        <constraint firstItem="q8f-bt-ofT" firstAttribute="top" secondItem="Ww6-YY-iaQ" secondAttribute="top" id="pEn-3Y-dF2"/>
+                                        <constraint firstItem="8Kv-wf-cfE" firstAttribute="leading" secondItem="q8f-bt-ofT" secondAttribute="trailing" constant="8" symbolic="YES" id="x1E-2t-Kgh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="appImage" destination="q8f-bt-ofT" id="VyE-CE-63r"/>
+                                    <outlet property="appNameLabel" destination="8Kv-wf-cfE" id="2oY-bL-V3R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DPi-4r-pOM" id="bjj-JY-T7o"/>
+                            <outlet property="delegate" destination="DPi-4r-pOM" id="NhE-pY-jaT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Popular Apps" id="f4o-pr-Igh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgJ-Oo-dw1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="1180.8056872037914"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="BS4-9p-uHM">
             <objects>
-                <viewController id="VYy-L7-dfy" customClass="StreamViewController" customModule="Subscription_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VYy-L7-dfy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lDJ-JO-D66">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +273,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="umb-gR-Pky">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="appTableCell" rowHeight="104" id="umb-gR-Pky">
                                         <rect key="frame" x="0.0" y="28" width="390" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umb-gR-Pky" id="vfS-1I-i5x">
@@ -236,7 +292,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-VE-dX1">
-                                                    <rect key="frame" x="162" y="52" width="69" height="41"/>
+                                                    <rect key="frame" x="161" y="52" width="69" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -264,9 +320,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="AppNameLabel" destination="KlE-98-24U" id="eW5-da-kgZ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -292,13 +345,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="AppTableView" destination="JQY-Gz-yxt" id="Nxl-vJ-8LY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6J-X2-Y7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653.84615384615381" y="1180.8056872037914"/>
+            <point key="canvasLocation" x="1583.0769230769231" y="1180.8056872037914"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="Dfk-wc-kcx">
@@ -376,7 +426,7 @@
             <objects>
                 <viewController id="TLt-Ea-v2W" customClass="ProfileViewController" customModule="Subscription_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aFl-GD-d3Z">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Users Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daV-PM-aXZ">
@@ -509,14 +559,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHs-Ur-d61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590.7692307692307" y="1180.8056872037914"/>
+            <point key="canvasLocation" x="2520" y="1180.8056872037914"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="LKp-Dg-H3o">
             <objects>
                 <viewController id="15D-XI-VJT" customClass="SettingsViewController" customModule="Subscription_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="puX-6h-7Qy">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZh-Uz-rRk">
@@ -569,25 +619,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fd-3S-Sa0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2561.5384615384614" y="1180.8056872037914"/>
+            <point key="canvasLocation" x="3490.7692307692305" y="1180.8056872037914"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="83W-xr-HrC">
+        <scene sceneID="vjQ-kw-JZ4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JDr-gy-thB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xVg-JD-Va8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A6B-pS-2or">
+                    <navigationItem key="navigationItem" id="qBt-8l-afJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="12h-lp-Mgk">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VYy-L7-dfy" kind="relationship" relationship="rootViewController" id="b3N-3X-BLC"/>
+                        <segue destination="DPi-4r-pOM" kind="relationship" relationship="rootViewController" id="GkF-0c-CqZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U1b-w2-F0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXj-9c-1h4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="466"/>
+            <point key="canvasLocation" x="-29.23076923076923" y="1180.8056872037914"/>
         </scene>
     </scenes>
     <resources>

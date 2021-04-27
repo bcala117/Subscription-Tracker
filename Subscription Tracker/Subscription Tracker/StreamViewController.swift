@@ -6,29 +6,29 @@
 //
 
 import UIKit
-
-class StreamViewController: UIViewController {
-
+import Foundation
+var appArray = [NSURL]()
+class StreamViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    class AppCell: UITableViewCell{
-        @IBOutlet weak var AppNameLabel: UILabel!
+        
+        
         
     }
-    @IBAction func ProfileButton(_ sender: Any) {
+    
+    @IBOutlet weak var appTableView: UITableView!
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "appTableCell", for: indexPath)
+        return cell
     }
     
-    @IBOutlet weak var AppTableView: UITableView!
-    
-    
-    @IBAction func DetailsButton(_ sender: Any) {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    @IBAction func AddButton(_ sender: Any) {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
-    
     /*
     // MARK: - Navigation
 
@@ -40,3 +40,4 @@ class StreamViewController: UIViewController {
     */
 
 }
+

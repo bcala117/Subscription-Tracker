@@ -16,10 +16,11 @@
 		C036E422262708B80093034D /* Subscription_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E421262708B80093034D /* Subscription_TrackerTests.swift */; };
 		C036E42D262708B80093034D /* Subscription_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E42C262708B80093034D /* Subscription_TrackerUITests.swift */; };
 		C036E43E262719F50093034D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E43D262719F50093034D /* LoginViewController.swift */; };
-		C036E44626271A390093034D /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E44526271A390093034D /* StreamViewController.swift */; };
 		C036E44B26271DC20093034D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E44A26271DC20093034D /* SignUpViewController.swift */; };
 		C036E450262729FD0093034D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E44F262729FD0093034D /* ProfileViewController.swift */; };
 		C036E45526273F120093034D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036E45426273F120093034D /* DetailsViewController.swift */; };
+		C0407D2E2630B15800BC5D84 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0407D2D2630B15800BC5D84 /* HomeTableViewController.swift */; };
+		C0CDB660262FB37600BEF33E /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDB65F262FB37600BEF33E /* AppTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +56,11 @@
 		C036E42C262708B80093034D /* Subscription_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription_TrackerUITests.swift; sourceTree = "<group>"; };
 		C036E42E262708B80093034D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C036E43D262719F50093034D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C036E44526271A390093034D /* StreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		C036E44A26271DC20093034D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C036E44F262729FD0093034D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C036E45426273F120093034D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C0407D2D2630B15800BC5D84 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		C0CDB65F262FB37600BEF33E /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +118,12 @@
 				C036E415262708B80093034D /* LaunchScreen.storyboard */,
 				C036E418262708B80093034D /* Info.plist */,
 				C036E43D262719F50093034D /* LoginViewController.swift */,
-				C036E44526271A390093034D /* StreamViewController.swift */,
 				C036E44A26271DC20093034D /* SignUpViewController.swift */,
 				C036E44F262729FD0093034D /* ProfileViewController.swift */,
 				C036E45426273F120093034D /* DetailsViewController.swift */,
 				C025081B2629D0EC000EA036 /* SettingsViewController.swift */,
+				C0CDB65F262FB37600BEF33E /* AppTableViewCell.swift */,
+				C0407D2D2630B15800BC5D84 /* HomeTableViewController.swift */,
 			);
 			path = "Subscription Tracker";
 			sourceTree = "<group>";
@@ -274,11 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C036E450262729FD0093034D /* ProfileViewController.swift in Sources */,
-				C036E44626271A390093034D /* StreamViewController.swift in Sources */,
 				C036E43E262719F50093034D /* LoginViewController.swift in Sources */,
 				C036E40B262708B60093034D /* AppDelegate.swift in Sources */,
 				C036E45526273F120093034D /* DetailsViewController.swift in Sources */,
+				C0CDB660262FB37600BEF33E /* AppTableViewCell.swift in Sources */,
 				C036E40D262708B60093034D /* SceneDelegate.swift in Sources */,
+				C0407D2E2630B15800BC5D84 /* HomeTableViewController.swift in Sources */,
 				C036E44B26271DC20093034D /* SignUpViewController.swift in Sources */,
 				C025081C2629D0EC000EA036 /* SettingsViewController.swift in Sources */,
 			);
